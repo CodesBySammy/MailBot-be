@@ -18,7 +18,7 @@ const corsOptions = {
 };
 
 // Apply CORS middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname)));
 
