@@ -11,6 +11,10 @@
             "src": "/send-emails",
             "dest": "server.js",
             "methods": ["POST", "OPTIONS"]
+        },
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
         }
     ]
 }
