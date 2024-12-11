@@ -9,9 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
     origin: [
-        'https://your-frontend-domain.vercel.app', // Replace with your actual frontend domain
-        'http://localhost:3000',
-        'https://localhost:3000'
+        'https://mailbot-ten.vercel.app/' // Replace with your actual frontend domain
     ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
