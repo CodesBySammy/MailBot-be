@@ -18,8 +18,7 @@ const corsOptions = {
 };
 
 // Apply CORS middleware
-//app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname)));
 
@@ -139,6 +138,6 @@ app.get('*', (_req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
 });
