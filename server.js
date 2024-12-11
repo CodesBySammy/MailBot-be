@@ -12,7 +12,7 @@ const corsOptions = {
         'https://mailbot-ten.vercel.app/' // Replace with your actual frontend domain
     ],
     methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type'],
     credentials: true,
     optionsSuccessStatus: 200
 };
