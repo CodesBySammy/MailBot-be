@@ -2,24 +2,20 @@
     "version": 2,
     "builds": [
         {
-            "src": "server.js",
+            "src": "app.js",
             "use": "@vercel/node"
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/send-emails",
-            "dest": "server.js",
-            "methods": ["POST", "OPTIONS"]
+            "source": "/send-emails",
+            "destination": "app.js"
         },
         {
-            "src": "/(.*)",
-            "dest": "server.js"
+            "source": "/(.*)",
+            "destination": "app.js"
         }
     ],
-    "env": {
-        "NODE_ENV": "production"
-    },
     "headers": [
         {
             "source": "/send-emails",
@@ -38,5 +34,8 @@
                 }
             ]
         }
-    ]
+    ],
+    "env": {
+        "NODE_ENV": "production"
+    }
 }
