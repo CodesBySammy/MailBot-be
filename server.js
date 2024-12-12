@@ -12,7 +12,7 @@ const corsOptions = {
     origin: [
         'http://localhost:3000', 
         'https://your-frontend-vercel-domain.vercel.app',
-        'https://mail-bot-frontend.vercel.app' // Replace with your actual frontend domain
+        'https://mailbot-ten.vercel.app/' // Replace with your actual frontend domain
     ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
