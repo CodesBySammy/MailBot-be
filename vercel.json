@@ -2,19 +2,19 @@
     "version": 2,
     "builds": [
         {
-            "src": "app.js",
+            "src": "server.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/send-emails",
-            "dest": "app.js",
+            "dest": "server.js",
             "methods": ["POST", "OPTIONS"]
         },
         {
             "src": "/(.*)",
-            "dest": "app.js"
+            "dest": "server.js"
         }
     ],
     "env": {
