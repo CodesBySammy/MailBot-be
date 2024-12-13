@@ -35,7 +35,7 @@ function replacePlaceholders(template, data) {
 
 // Email Sending Endpoint
 app.post('/send-emails', async (req, res) => {
-    const { fromEmail, appPassword, subject, message, html, emails } = req.body;
+    const { fromEmail, appPassword, subject, message, html, emails, fromName } = req.body;
 
     if (!fromEmail || !appPassword || !emails || emails.length === 0) {
         return res.status(400).json({ 
@@ -79,7 +79,7 @@ app.post('/send-emails', async (req, res) => {
                     
                     const mailOptions = {
                         from: {
-                            name: 'Mozilla Firefox Club',
+                            name: fromName,
                             address: fromEmail
                         },
                         to: emailData.Email,
