@@ -18,7 +18,8 @@ const corsOptions = {
 };
 
 // Middleware
-app.use(cors(corsOptions));
+app.use(cors());
+//app.use(cors(corsOptions));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname)));
 
@@ -134,8 +135,8 @@ app.post('/send-emails', async (req, res) => {
 });
 
 // Handle preflight requests
-app.options('*', cors(corsOptions));
-
+//app.options('*', cors(corsOptions));
+app.options('*', cors());
 // Serve frontend
 app.get('*', (_req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
